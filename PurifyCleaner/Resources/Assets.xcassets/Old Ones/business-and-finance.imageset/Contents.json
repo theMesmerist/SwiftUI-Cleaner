@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "business-and-finance.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

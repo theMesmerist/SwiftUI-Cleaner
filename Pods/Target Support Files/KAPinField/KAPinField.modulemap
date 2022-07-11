@@ -1,0 +1,6 @@
+framework module KAPinField {
+  umbrella header "KAPinField-umbrella.h"
+
+  export *
+  module * { export * }
+}

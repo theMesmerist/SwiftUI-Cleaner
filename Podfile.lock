@@ -1,0 +1,221 @@
+PODS:
+  - Adjust (4.30.0):
+    - Adjust/Core (= 4.30.0)
+  - Adjust/Core (4.30.0)
+  - Branch (1.42.0)
+  - CocoaImageHashing (1.7.0)
+  - Files (4.0.2)
+  - Firebase/Analytics (9.1.0):
+    - Firebase/Core
+  - Firebase/Core (9.1.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (~> 9.1.0)
+  - Firebase/CoreOnly (9.1.0):
+    - FirebaseCore (= 9.1.0)
+  - Firebase/RemoteConfig (9.1.0):
+    - Firebase/CoreOnly
+    - FirebaseRemoteConfig (~> 9.1.0)
+  - FirebaseABTesting (9.1.0):
+    - FirebaseCore (~> 9.0)
+  - FirebaseAnalytics (9.1.0):
+    - FirebaseAnalytics/AdIdSupport (= 9.1.0)
+    - FirebaseCore (~> 9.0)
+    - FirebaseInstallations (~> 9.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
+    - GoogleUtilities/MethodSwizzler (~> 7.7)
+    - GoogleUtilities/Network (~> 7.7)
+    - "GoogleUtilities/NSData+zlib (~> 7.7)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseAnalytics/AdIdSupport (9.1.0):
+    - FirebaseCore (~> 9.0)
+    - FirebaseInstallations (~> 9.0)
+    - GoogleAppMeasurement (= 9.1.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
+    - GoogleUtilities/MethodSwizzler (~> 7.7)
+    - GoogleUtilities/Network (~> 7.7)
+    - "GoogleUtilities/NSData+zlib (~> 7.7)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseCore (9.1.0):
+    - FirebaseCoreDiagnostics (~> 9.0)
+    - FirebaseCoreInternal (~> 9.0)
+    - GoogleUtilities/Environment (~> 7.7)
+    - GoogleUtilities/Logger (~> 7.7)
+  - FirebaseCoreDiagnostics (9.1.0):
+    - GoogleDataTransport (< 10.0.0, >= 9.1.4)
+    - GoogleUtilities/Environment (~> 7.7)
+    - GoogleUtilities/Logger (~> 7.7)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseCoreInternal (9.1.0):
+    - "GoogleUtilities/NSData+zlib (~> 7.7)"
+  - FirebaseDynamicLinks (9.1.0):
+    - FirebaseCore (~> 9.0)
+  - FirebaseInstallations (9.1.0):
+    - FirebaseCore (~> 9.0)
+    - GoogleUtilities/Environment (~> 7.7)
+    - GoogleUtilities/UserDefaults (~> 7.7)
+    - PromisesObjC (~> 2.1)
+  - FirebaseRemoteConfig (9.1.0):
+    - FirebaseABTesting (~> 9.0)
+    - FirebaseCore (~> 9.0)
+    - FirebaseInstallations (~> 9.0)
+    - GoogleUtilities/Environment (~> 7.7)
+    - "GoogleUtilities/NSData+zlib (~> 7.7)"
+  - Google-Mobile-Ads-SDK (9.5.0):
+    - GoogleAppMeasurement (< 10.0, >= 7.0)
+    - GoogleUserMessagingPlatform (>= 1.1)
+  - GoogleAppMeasurement (9.1.0):
+    - GoogleAppMeasurement/AdIdSupport (= 9.1.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
+    - GoogleUtilities/MethodSwizzler (~> 7.7)
+    - GoogleUtilities/Network (~> 7.7)
+    - "GoogleUtilities/NSData+zlib (~> 7.7)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/AdIdSupport (9.1.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 9.1.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
+    - GoogleUtilities/MethodSwizzler (~> 7.7)
+    - GoogleUtilities/Network (~> 7.7)
+    - "GoogleUtilities/NSData+zlib (~> 7.7)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/WithoutAdIdSupport (9.1.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
+    - GoogleUtilities/MethodSwizzler (~> 7.7)
+    - GoogleUtilities/Network (~> 7.7)
+    - "GoogleUtilities/NSData+zlib (~> 7.7)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleDataTransport (9.1.4):
+    - GoogleUtilities/Environment (~> 7.7)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUserMessagingPlatform (2.0.0)
+  - GoogleUtilities/AppDelegateSwizzler (7.7.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (7.7.0):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.7.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (7.7.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (7.7.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.7.0)"
+  - GoogleUtilities/Reachability (7.7.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (7.7.0):
+    - GoogleUtilities/Logger
+  - Hero (1.6.1)
+  - KAPinField (5.0.2)
+  - lottie-ios (3.3.0)
+  - MediaBrowser (2.3.0):
+    - SDWebImage
+    - UICircularProgressRing
+  - nanopb (2.30909.0):
+    - nanopb/decode (= 2.30909.0)
+    - nanopb/encode (= 2.30909.0)
+  - nanopb/decode (2.30909.0)
+  - nanopb/encode (2.30909.0)
+  - PromisesObjC (2.1.0)
+  - Purchasely (3.2.3)
+  - SDWebImage (5.12.5):
+    - SDWebImage/Core (= 5.12.5)
+  - SDWebImage/Core (5.12.5)
+  - SwiftyStoreKit (0.16.1)
+  - SystemServices (2.0.1)
+  - UICircularProgressRing (8.0.0)
+  - YandexMobileMetrica/Dynamic (4.2.0):
+    - YandexMobileMetrica/Dynamic/Core (= 4.2.0)
+    - YandexMobileMetrica/Dynamic/Crashes (= 4.2.0)
+  - YandexMobileMetrica/Dynamic/Core (4.2.0)
+  - YandexMobileMetrica/Dynamic/Crashes (4.2.0):
+    - YandexMobileMetrica/Dynamic/Core
+
+DEPENDENCIES:
+  - Adjust
+  - Branch
+  - CocoaImageHashing
+  - Files
+  - Firebase/Analytics
+  - Firebase/RemoteConfig
+  - FirebaseDynamicLinks
+  - Google-Mobile-Ads-SDK
+  - Hero
+  - KAPinField
+  - lottie-ios
+  - MediaBrowser
+  - Purchasely
+  - SwiftyStoreKit
+  - SystemServices
+  - YandexMobileMetrica/Dynamic
+
+SPEC REPOS:
+  trunk:
+    - Adjust
+    - Branch
+    - CocoaImageHashing
+    - Files
+    - Firebase
+    - FirebaseABTesting
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseCoreInternal
+    - FirebaseDynamicLinks
+    - FirebaseInstallations
+    - FirebaseRemoteConfig
+    - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleUserMessagingPlatform
+    - GoogleUtilities
+    - Hero
+    - KAPinField
+    - lottie-ios
+    - MediaBrowser
+    - nanopb
+    - PromisesObjC
+    - Purchasely
+    - SDWebImage
+    - SwiftyStoreKit
+    - SystemServices
+    - UICircularProgressRing
+    - YandexMobileMetrica
+
+SPEC CHECKSUMS:
+  Adjust: 6ed5493e91e9a77f6515d94f640bb72506a06b9d
+  Branch: a6f1d597dc7c027360f386d05e8d109043b207d8
+  CocoaImageHashing: 2c8efd6dd60f9030cd54086b34ffc48e927821c3
+  Files: d88e31b84d65e754935053b1c584ea8e2320698a
+  Firebase: 91c243d75573ac6e7c9735ec859b72bffb61347d
+  FirebaseABTesting: 0573c1477dd2fb8204a1d317f8968ea171c6dccc
+  FirebaseAnalytics: bf11064790ac96804df1df9ddc0ae45af950d9fc
+  FirebaseCore: b7bfc258e996eada23b3666bd6b9a22ca092acb8
+  FirebaseCoreDiagnostics: 2dabba3412b23b524823325739f45e520f67d1e7
+  FirebaseCoreInternal: f3c838ae0b41cd840bbf34f90debfede78d352e5
+  FirebaseDynamicLinks: d2cc5fe0378fd2a191becfaadd112c07227b32e4
+  FirebaseInstallations: a91c74276b544524ce144c8315d8cdbce2dbe30b
+  FirebaseRemoteConfig: ebd0eb74b9a0593ab2a3f0788a5be5595b46a05c
+  Google-Mobile-Ads-SDK: caf686ba55108412e02a3eedb136e12e488dbfaa
+  GoogleAppMeasurement: 8ecc717f2abe3f9ee95a5d38db08827852894acc
+  GoogleDataTransport: 5fffe35792f8b96ec8d6775f5eccd83c998d5a3b
+  GoogleUserMessagingPlatform: ab890ce5f6620f293a21b6bdd82e416a2c73aeca
+  GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
+  Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
+  KAPinField: b7c0a68a3887f3a1c42446bfc4cbf76d5abf0f4f
+  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
+  MediaBrowser: 6dc19b2d900db201083f2cdfb8bd650be7382bc3
+  nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
+  PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
+  Purchasely: a8519b9e102dcf185f64fdc756a36e50f97352dd
+  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
+  SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
+  SystemServices: 7af348493ece8951449b476c41532df72569b181
+  UICircularProgressRing: 19927375b2b21b5fa5fd9582f15ccdef9659da16
+  YandexMobileMetrica: f5f9c605eaaba33ff6ab2b6bc3259035ca60ed87
+
+PODFILE CHECKSUM: 2e628322f460e4d944d70df9204f438b98fc76bc
+
+COCOAPODS: 1.11.2
