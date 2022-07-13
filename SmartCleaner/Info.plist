@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Our application needs permission to detect duplicated photos, large videos and screenshots.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App need to access photo library tom import photos to application</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string></string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Poppins-Bold.ttf</string>
+		<string>Poppins-SemiBold.ttf</string>
+		<string>Poppins-Medium.ttf</string>
+		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-Light.ttf</string>
+	</array>
+</dict>
+</plist>
