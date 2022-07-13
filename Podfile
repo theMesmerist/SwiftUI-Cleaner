@@ -1,27 +1,30 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'PurifyCleaner' do
+target 'SmartCleaner' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for PurifyCleaner
+  # Pods for SmartCleaner
 
- pod 'MediaBrowser'
+  pod 'ReachabilitySwift'
+  pod 'Alamofire', '~> 5.0.0-rc.2'
+  pod 'ProgressHUD'
+  pod "DKImagePickerController"
+  pod 'SDWebImage'
+  pod "YRPayment"
+  pod 'OTPFieldView'
+  pod 'TTSegmentedControl'
+  pod 'SwiftyStoreKit'
+  pod 'SystemServices', '~> 2.0.1'
+  pod 'MultiProgressView'
+  pod 'SPStorkController'
+  pod 'UICircularProgressRing'
+  pod 'MediaBrowser'
   pod 'SystemServices'
   pod 'CocoaImageHashing'
   pod 'Files'
   pod 'KAPinField'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/RemoteConfig'
-  pod 'SwiftyStoreKit'
   pod 'lottie-ios'
-  pod 'Hero'
-  pod 'Adjust'
-  pod 'Purchasely'
-  pod 'YandexMobileMetrica/Dynamic'
-  pod 'Branch'
-  pod 'Google-Mobile-Ads-SDK'
-  pod 'FirebaseDynamicLinks'
 
 end
