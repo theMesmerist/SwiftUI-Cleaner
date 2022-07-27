@@ -1,0 +1,6 @@
+framework module YRPayment {
+  umbrella header "YRPayment-umbrella.h"
+
+  export *
+  module * { export * }
+}

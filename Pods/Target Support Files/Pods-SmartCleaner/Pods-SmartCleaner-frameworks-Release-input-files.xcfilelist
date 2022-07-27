@@ -1,0 +1,23 @@
+${PODS_ROOT}/Target Support Files/Pods-SmartCleaner/Pods-SmartCleaner-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/CocoaImageHashing/CocoaImageHashing.framework
+${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework
+${BUILT_PRODUCTS_DIR}/DKCamera/DKCamera.framework
+${BUILT_PRODUCTS_DIR}/DKImagePickerController/DKImagePickerController.framework
+${BUILT_PRODUCTS_DIR}/DKPhotoGallery/DKPhotoGallery.framework
+${BUILT_PRODUCTS_DIR}/Files/Files.framework
+${BUILT_PRODUCTS_DIR}/KAPinField/KAPinField.framework
+${BUILT_PRODUCTS_DIR}/MediaBrowser/MediaBrowser.framework
+${BUILT_PRODUCTS_DIR}/MultiProgressView/MultiProgressView.framework
+${BUILT_PRODUCTS_DIR}/OTPFieldView/OTPFieldView.framework
+${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SPStorkController/SPStorkController.framework
+${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework
+${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework
+${BUILT_PRODUCTS_DIR}/SystemServices/SystemServices.framework
+${BUILT_PRODUCTS_DIR}/TTSegmentedControl/TTSegmentedControl.framework
+${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework
+${BUILT_PRODUCTS_DIR}/YRPayment/YRPayment.framework
+${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework
