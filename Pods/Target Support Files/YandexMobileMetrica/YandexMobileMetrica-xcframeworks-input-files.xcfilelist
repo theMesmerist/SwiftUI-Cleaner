@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/YandexMobileMetrica/YandexMobileMetrica-xcframeworks.sh
+${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetrica.xcframework
+${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetricaCrashes.xcframework

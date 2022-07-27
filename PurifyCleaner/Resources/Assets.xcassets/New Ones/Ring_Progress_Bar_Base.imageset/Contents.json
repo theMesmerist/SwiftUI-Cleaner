@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Ring_Progress_Bar_Base.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Ring_Progress_Bar_Base@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Ring_Progress_Bar_Base@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,6 +1,0 @@
-framework module OTPFieldView {
-  umbrella header "OTPFieldView-umbrella.h"
-
-  export *
-  module * { export * }
-}

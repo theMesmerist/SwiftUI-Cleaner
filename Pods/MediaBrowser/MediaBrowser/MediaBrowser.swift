@@ -63,7 +63,7 @@ func floorcgf(x: CGFloat) -> CGFloat {
     // Video
     lazy internal var currentVideoPlayerViewController: AVPlayerViewController = {
         if #available(iOS 9.0, *) {
-            $0.delegate = self
+           // $0.delegate = self
         }
         return $0
     }(AVPlayerViewController())
