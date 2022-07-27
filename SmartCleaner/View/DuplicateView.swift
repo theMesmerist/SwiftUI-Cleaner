@@ -59,12 +59,13 @@ struct DuplicatesView: View {
             GeometryReader { _ in
                 ScrollView(.vertical) {
                     LazyVGrid(columns: layout) {
-                        ForEach(arrDuplicateImageGroups, id: \.self) { item in
+                        ForEach(arrDuplicateImageGroups.filter({$0.count > 0 }), id: \.self) { item in
                             VStack {
-                                Image(uiImage: item[0])
+                                Image(uiImage:  item[0])
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: screenWidth * 0.8, height: screenHeight * 0.3, alignment: .center)
+                                    
                                 HStack {
                                     ScrollView(.horizontal) {
                                         HStack {
@@ -113,9 +114,7 @@ struct DuplicatesView: View {
         .frame(width: screenWidth, height: screenHeight, alignment: .top)
         .navigationBarHidden(true)
         .background(Color(bgColor))
-        .onAppear {
-            photoLibraryAuthorization(success: { takeAssets() }, failed: { fatalError("You need to be authorized") })
-        }
+        
     }
 }
 

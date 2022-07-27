@@ -29,6 +29,9 @@ struct LargeVideosView: View {
                 .frame(height: 0.1 * screenHeight, alignment: .center)
             HStack {
                 Button(action: {
+                    if !isVideoSelected {
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "back"), object: nil, userInfo: nil)
+                    }
                     isVideoSelected ? isVideoSelected.toggle() : self.presentationMode.wrappedValue.dismiss()
                 }, label: {
                         Image(isVideoSelected ? "btn_cross" : "btn_back")
@@ -91,8 +94,6 @@ struct LargeVideosView: View {
             .navigationBarHidden(true)
             .frame(width: screenWidth, height: screenHeight, alignment: .center)
             .background(Color(bgColor))
-            .onAppear {
-        }
     }
 }
 
@@ -138,6 +139,6 @@ extension LargeVideosView {
                 }
             }
         }
-
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "videosFetchFinished"), object: nil, userInfo: nil) 
     }
 }

@@ -84,7 +84,7 @@ class ScreenshotModel: ObservableObject {
                 }
             }
             
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "screenshotPressed"), object: nil, userInfo: nil) 
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "screenshotFetchFinished"), object: nil, userInfo: nil) 
         } else {
             self.errorString = "No photos to display"
         }

@@ -39,11 +39,22 @@ func photoLibraryAuthorization(success: @escaping () -> Void, failed: @escaping 
     }
 }
 
+func takeAssetsMain() {
+    photoAsset = ImageManager.takeAssetsfor(mediaType: PHAssetMediaType.image.rawValue, subtypeOfAlbum: .smartAlbumUserLibrary)
+    videoAsset = ImageManager.takeAssetsfor(mediaType: PHAssetMediaType.video.rawValue, subtypeOfAlbum: .smartAlbumVideos)
+    screenshotAsset = ImageManager.takeAssetsfor(mediaType: PHAssetMediaType.image.rawValue, subtypeOfAlbum: .smartAlbumScreenshots)
+    takeAssetsDataToModel()
+    
+}
+
 func takeAssets() {
     photoAsset = ImageManager.takeAssetsfor(mediaType: PHAssetMediaType.image.rawValue, subtypeOfAlbum: .smartAlbumUserLibrary)
     videoAsset = ImageManager.takeAssetsfor(mediaType: PHAssetMediaType.video.rawValue, subtypeOfAlbum: .smartAlbumVideos)
     screenshotAsset = ImageManager.takeAssetsfor(mediaType: PHAssetMediaType.image.rawValue, subtypeOfAlbum: .smartAlbumScreenshots)
     takeAssetsDataToModel()
+    
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "duplicatesFetchFinished"), object: nil, userInfo: nil) 
+    
 }
 
 func takeAssetsDataToModel() {

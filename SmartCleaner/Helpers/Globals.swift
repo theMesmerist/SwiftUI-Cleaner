@@ -27,7 +27,7 @@ var stringMultiplier = CGFloat()
 var allLargeVideos = [Videos]()
 
 var screenShotsWillDelete = [URL]()
-
+var sender = ""
 
 func setDefaultSize(view: UIView) {
     screenH = view.frame.size.height

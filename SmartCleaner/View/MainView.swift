@@ -89,9 +89,7 @@ struct MainView: View {
                 calculateProgress(progress: progress)
                 requestPermission()
                 duplicates?.append([PHAsset]())
-               
-                LargeVideosView().fetchAllVideos()
-                photoLibraryAuthorization(success: { takeAssets() }, failed: { fatalError("You need to be authorized") })
+                photoLibraryAuthorization(success: { takeAssetsMain() }, failed: { fatalError("You need to be authorized") })
             }
                 .frame(width: screenWidth, height: screenHeight, alignment: .center)
                 .edgesIgnoringSafeArea(.all)

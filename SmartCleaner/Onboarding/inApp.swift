@@ -110,9 +110,9 @@ struct inApp: View {
                 .padding(.vertical)
             HStack{
                 Button {
-                    print("Terns & Conditions")
+                    print("Terms & Conditions")
                 } label: {
-                    Text("Terns & Conditions")
+                    Text("Terms & Conditions")
                         .foregroundColor(Color(descriptionColor))
                         .underline()
                 }.padding(.leading, 0.1 * screenWidth)

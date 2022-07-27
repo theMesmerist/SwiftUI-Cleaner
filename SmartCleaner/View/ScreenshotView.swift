@@ -19,7 +19,6 @@ struct ScreenshotView: View {
     @State var image = Image("img_example")
     @ObservedObject var screenshots = ScreenshotModel()
     
-    @State var lottie = LottieView(lottieFile: "loadingAnimation")
     @State var push = false
     let layout = [
         GridItem(.fixed(110)),
@@ -33,17 +32,21 @@ struct ScreenshotView: View {
                 .frame(height: 0.1 * screenHeight, alignment: .center)
             HStack {
                 Button(action: {
+                    if !isVideoSelected {
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "back"), object: nil, userInfo: nil)
+                    }
+                    
                     isVideoSelected ? isVideoSelected.toggle() : self.presentationMode.wrappedValue.dismiss()
                 }, label: {
-                    Image(isVideoSelected ? "btn_cross" : "btn_back")
+                    Image("btn_back")
                 })
                 Spacer()
-                Text(isVideoSelected ? "\(choosedVideoNum) Selected" : "Screenshots")
+                Text("Screenshots")
                     .font(.custom("Poppins-Semibold", size: 24))
                     .frame(width: 0.6 * screenWidth, height: 0.05 * screenHeight, alignment: .center)
                     .offset(CGSize(width: -13, height: 0))
                 Button(action: {
-                    showAlertX.toggle()
+                    isVideoSelected ? showAlertX.toggle() : isVideoSelected.toggle()
                 }, label: {
                     Image("btn_thrash")
                 })
@@ -55,25 +58,33 @@ struct ScreenshotView: View {
                 .frame(height: 0.05 * screenHeight, alignment: .center)
 
             GeometryReader { _ in
-                lottie
-                    .frame(width: screenWidth * 0.9, height: screenHeight * 0.2, alignment: .center)
-                lottie.opacity(1)
                 
                 ScrollView(.vertical) {
                     LazyVGrid(columns: layout) {
                         ForEach(allScreenshot, id: \.self) { screenshot in
+                            ZStack{
+                                
+                            
                             VStack {
                                 Image(uiImage: screenshot.image)
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 0.27 * screenWidth, height: 0.18 * screenHeight, alignment: .center)
-                                    .border(Color.purple, width: 5)
+//                                    .border(Color.purple, width: isVideoSelected ? 5 : 0)
                             }
-                            .onTapGesture {
-                                print("\(screenshot.url) added")
-                                screenShotsWillDelete.append(screenshot.url!)
+                                
+                              
+                                Image("btn_cross_img")
+                                    .frame(width: 0.27 * screenWidth, height: 0.18 * screenHeight, alignment: .topTrailing)
+                                    .onTapGesture {
+                                        print("\(String(describing: screenshot.url)) added")
+                                       
+                                        screenShotsWillDelete.append(screenshot.url!)
+                                        
+                                        deleteImage(imageUrls: screenShotsWillDelete)
+                                        screenShotsWillDelete = []
+                                    }
                             }
-                            .onLongPressGesture {}
                         }
                     }
                     Spacer()
@@ -81,11 +92,14 @@ struct ScreenshotView: View {
                 }.frame(width: screenWidth, height: 0.85 * screenHeight, alignment: .bottom)
             }
             .alertX(isPresented: $showAlertX, content: {
+                
                 AlertX(title: Text("Deleting Screenshots"),
                        primaryButton: .cancel(),
                        secondaryButton: .default(Text("Delete")
                            .foregroundColor(Color.red), action: {
                                deleteImage(imageUrls: screenShotsWillDelete)
+                              
+                              
                            }), theme: .light())
             })
         }
@@ -111,17 +125,9 @@ struct ScreenshotView: View {
             default:
                 print("default")
             }
-            ScreenshotModel().getAllPhotos()
-            
+   
         }
         
-        .onReceive(NotificationCenter.default.publisher(for: Notification.Name(rawValue: "screenshotPressed")))
-                { data in
-                    
-                    lottie.animationView.stop()
-                    lottie.opacity(0)
-                    NotificationCenter.default.removeObserver("screenshotPressed")
-                }
         
     }
 }
@@ -138,13 +144,45 @@ extension ScreenshotView {
     }
 
     func deleteImage(imageUrls: [URL]) {
-        PHPhotoLibrary.shared().performChanges({
-            let imageAssetToDelete = PHAsset.fetchAssets(withALAssetURLs: imageUrls, options: nil)
-            PHAssetChangeRequest.deleteAssets(imageAssetToDelete)
-        }, completionHandler: {
-            success, error in
-            print(success ? "Success" : error as Any)
-
-        })
+        
+        var assets = [PHAsset]()
+        for imageUrl in imageUrls {
+            
+            
+            assets.append(PHAssetForFileURL(url: imageUrl)!)
+ 
+        }
+     
+        
+   
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            
+            PHPhotoLibrary.shared().performChanges({
+                PHAssetChangeRequest.deleteAssets(assets as NSArray)
+            }, completionHandler: {
+                success, error in
+               
+                print(success ? "Success" : error as Any)
+                
+            })
+            
+        }
+      
+    }
+    
+    func PHAssetForFileURL(url: URL) -> PHAsset? {
+        var imageRequestOptions = PHImageRequestOptions()
+        imageRequestOptions.version = .current
+        imageRequestOptions.deliveryMode = .fastFormat
+        imageRequestOptions.resizeMode = .fast
+        imageRequestOptions.isSynchronous = true
+        let fetchResult = PHAsset.fetchAssets(with: nil)
+        
+        for index in 0...fetchResult.count{
+            if let asset = fetchResult[index] as? PHAsset {
+            return asset
+            }
+        }
+        return nil
     }
 }

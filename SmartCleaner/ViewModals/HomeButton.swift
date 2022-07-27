@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeButton: View {
+    
     @State var btnImg: String = ""
     @State var btnTitle: String = "Vault"
     @State var btnDescription: String = "Keep your private media safe in encrypted area"
@@ -26,7 +27,7 @@ struct HomeButton: View {
         NavigationLink(destination: LargeVideosView(), isActive: $isLarge) {
             EmptyView()
         }
-        NavigationLink(destination: ScreenshotView(), isActive: $isScreenShot) {
+        NavigationLink(destination: LoaderView(), isActive: $isScreenShot) {
             EmptyView()
         }
 
@@ -47,10 +48,13 @@ struct HomeButton: View {
             Button {
                 switch btnTitle {
                 case "Large Videos":
-                    isLarge.toggle()
+                    sender = "getLargeVideos"
+                    isScreenShot.toggle()
                 case "Duplicates":
+                    sender = "getDuplicates"
                     isDuplicate.toggle()
                 case "Screenshot":
+                    sender = "getScreenShots"
                     isScreenShot.toggle()
                 case "Vault":
                     if passwordExist {
